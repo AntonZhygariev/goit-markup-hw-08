@@ -1,0 +1,87 @@
+/* Footer */
+
+.footer {
+	background-color: $footer-bg-color;
+	color: $white-color;
+}
+
+.footer-container {
+	@include centerFlex($align-items: baseline);
+}
+
+.address-container {
+	margin-right: 69px;
+	width: 230px;
+}
+
+.logo-cont {
+	margin-top: 45px;
+	margin-bottom: 20px;
+}
+
+.list.address {
+	font-style: normal;
+	@include font(normal, 14px, 1.71);
+	margin-bottom: 28px;
+}
+
+.address .item {
+	margin-bottom: 9px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.footer-contact {
+	color: $footer-adress-color;
+	font-style: normal;
+	@include font(normal, 14px, 1.71);
+}
+
+.connect {
+	@include font(bold, 14px, 1.14);
+	text-transform: uppercase;
+	margin-right: 94px;
+	width: 210px;
+}
+
+.subscribe {
+	width: 570px;
+	@include font(bold, 14px, 1.14);
+	text-transform: uppercase;
+}
+
+.develop {
+	color: $developed-color;
+	@include font(normal, 14px, 2);
+	text-align: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	padding-top: 18px;
+	padding-bottom: 21px;
+}
+
+.subscribe-form {
+	@include centerFlex($align-items: baseline);
+}
+
+.footer-subscribe {
+	width: 360px;
+	height: 50px;
+	margin-right: 12px;
+	padding-left: 16px;
+
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	background-color: inherit;
+
+	@include font(normal, 16px, 20px);
+	letter-spacing: 0.03em;
+
+	color: $footer-adress-color;
+}
+
+.develop-container {
+	display: block;
+	text-align: center;
+}

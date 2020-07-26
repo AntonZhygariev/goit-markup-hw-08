@@ -1,0 +1,46 @@
+/* Features */
+
+.no-padding {
+	padding-bottom: 0;
+}
+
+.features {
+	@include centerFlex;
+
+	& .item {
+		width: 270px;
+	}
+
+	& .item + .item {
+		margin-left: 30px;
+	}
+}
+
+.features-top {
+	display: block;
+	height: 120px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: $second-bg-color;
+	text-align: center;
+	border-radius: 4px;
+
+	& .icon {
+		width: 70px;
+		height: 70px;
+	}
+}
+
+.title-text {
+	color: $title-text-color;
+	@include font(bold, 14px, 1.14);
+	text-transform: uppercase;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.item-text {
+	@include font(normal, 14px, 1.71);
+
+	margin-top: 0;
+}

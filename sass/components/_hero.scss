@@ -1,0 +1,30 @@
+/* Hero */
+.hero-text {
+	color: $white-color;
+	@include font(900, 44px, 1.36);
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.hero {
+	@include centerFlex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 700px;
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+
+.hero-bg {
+	max-width: 1600px;
+	min-height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/hero-img.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}

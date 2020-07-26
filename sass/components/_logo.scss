@@ -1,0 +1,15 @@
+/* Logo */
+
+.logo {
+	color: $accent-color;
+	font-family: Raleway, sans-serif;
+	@include font(bold, 26px, 1.2);
+
+	&-header {
+		color: $logo-color;
+	}
+
+	&-footer {
+		color: $white-color;
+	}
+}
