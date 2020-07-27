@@ -2,7 +2,7 @@
 
 .logo {
 	color: $accent-color;
-	font-family: Raleway, sans-serif;
+	font-family: $logoFont;
 	@include font(bold, 26px, 1.2);
 
 	&-header {
