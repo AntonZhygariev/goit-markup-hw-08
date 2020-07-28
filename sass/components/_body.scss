@@ -34,11 +34,9 @@ body {
 	padding-top: 94px;
 	padding-bottom: 94px;
 
-	&:not(:last-child) {
-		@media screen and (max-width: $desctop - 1px) {
-			padding-top: 60px;
-			padding-bottom: 60px;
-		}
+	@media screen and (max-width: $desctop - 1px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 }
 
@@ -49,4 +47,8 @@ body {
 	text-align: center;
 	margin-top: 0;
 	margin-bottom: 50px;
+
+	@media screen and (max-width: $desctop - 1px) {
+		margin-bottom: 30px;
+	}
 }
