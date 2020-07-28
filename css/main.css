@@ -921,27 +921,41 @@ body {
 }
 
 /* Portfolio */
-.project-blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -15px;
+@media screen and (min-width: 768px) {
+  .project-blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .project-container {
-  width: 370px;
-  margin: 15px;
   border: 1px solid #eeeeee;
   position: relative;
   top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .project-container {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-container {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-container:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .project-blocks .item:hover .full-text-item,
@@ -990,6 +1004,9 @@ body {
 }
 
 .title-font {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #212121;
   font-weight: bold;
   font-size: 18px;
@@ -1036,17 +1053,46 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
-.filter-button-block .item + .item {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .filter-button-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-button-block {
+    margin-bottom: 50px;
+  }
+}
+
+.filter-button-block-item {
+  margin-bottom: 15px;
+}
+
+.filter-button-block-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-button-block-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-button-block-item {
+    margin-bottom: 0;
+  }
 }
 
 .current-button {

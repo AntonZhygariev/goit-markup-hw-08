@@ -23,11 +23,36 @@
 }
 
 .filter-button-block {
-	@include centerFlex;
-	margin-bottom: 50px;
+	display: flex;
+	flex-wrap: wrap;
 
-	& .item + .item {
-		margin-left: 8px;
+	margin-bottom: 40px;
+
+	@media screen and (min-width: $tablet) {
+		justify-content: center;
+		flex-wrap: nowrap;
+		margin-bottom: 30px;
+	}
+
+	@media screen and (min-width: $desctop) {
+		margin-bottom: 50px;
+	}
+}
+
+.filter-button-block-item {
+	margin-bottom: 15px;
+
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
+
+	@media screen and (max-width: $tablet - 1px) {
+		&:nth-last-child(-n + 2) {
+			margin-bottom: 0;
+		}
+	}
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
 	}
 }
 
