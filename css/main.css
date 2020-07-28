@@ -68,7 +68,7 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .section:not(:last-child) {
+  .section {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -82,6 +82,12 @@ body {
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1199px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
 }
 
 /* Logo */
@@ -408,6 +414,12 @@ body {
   .team-item {
     width: calc((100% - 8 * 15px) / 4);
     margin: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -862,7 +874,7 @@ body {
           align-items: center;
   margin-right: 32px;
   margin-left: 32px;
-  padding-bottom: 20px;
+  padding-bottom: 24px;
 }
 
 .social .item + .item {
