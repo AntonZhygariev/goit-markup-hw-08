@@ -1,7 +1,6 @@
 .link:hover, .link:focus, .adress-header:hover, .adress-header:focus, .customer-icon:hover,
 .customer-icon:focus, .backdrop, .modal-icon-close:hover, .modal-icon-close:focus, .icon-social:hover, .icon-social:focus, .social-footer .icon-social:hover, .social-footer .icon-social:focus, .project-blocks .item:hover .full-text-item,
-.project-blocks .item:focus .full-text-item, .project-container .item .item:hover,
-.project-container .item .item:focus, .full-text-item, .filter-button:hover, .filter-button:focus, .button:hover, .button:focus {
+.project-blocks .item:focus .full-text-item, .project-container .item:hover, .project-container .item:focus, .full-text-item, .filter-button:hover, .filter-button:focus, .button:hover, .button:focus {
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -974,8 +973,7 @@ body {
   display: block;
 }
 
-.project-container .item .item:hover,
-.project-container .item .item:focus {
+.project-container .item:hover, .project-container .item:focus {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }

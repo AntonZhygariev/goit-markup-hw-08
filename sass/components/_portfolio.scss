@@ -9,9 +9,6 @@
 }
 
 .project-container {
-	// width: 370px;
-
-	// margin: 15px;
 	border: 1px solid #eeeeee;
 
 	position: relative;
@@ -43,8 +40,8 @@
 
 .project-container .item {
 	display: block;
-	& .item:hover,
-	& .item:focus {
+	&:hover,
+	&:focus {
 		box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 		@extend %Transition;
 	}
