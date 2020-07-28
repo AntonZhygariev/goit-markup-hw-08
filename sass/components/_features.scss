@@ -5,14 +5,22 @@
 }
 
 .features {
-	@include centerFlex;
-
-	& .item {
-		width: 270px;
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -15px;
 	}
 
-	& .item + .item {
-		margin-left: 30px;
+	& .item {
+		@media screen and (min-width: $tablet) {
+			width: calc((100% - 4 * 15px) / 2);
+			margin: 15px;
+		}
+
+		@media screen and (min-width: $desctop) {
+			width: calc((100% - 8 * 15px) / 4);
+			margin: 15px;
+		}
 	}
 }
 
@@ -37,10 +45,15 @@
 	text-transform: uppercase;
 	margin-top: 30px;
 	margin-bottom: 10px;
+
+	@media screen and (max-width: $tablet - 1px) {
+		text-align: center;
+	}
 }
 
 .item-text {
 	@include font(normal, 14px, 1.71);
 
 	margin-top: 0;
+	margin-bottom: 0;
 }
