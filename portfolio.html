@@ -16,42 +16,48 @@
 	</head>
 	<body>
 		<!-- Верхнее меню -->
-		<header>
-			<div class="container header-nav">
-				<a href="./index.html" class="logo">
-					Web
-					<span class="logo-header">Studio</span>
-				</a>
-				<nav class="top-nav">
-					<ul class="list site-nav">
-						<li class="item"><a href="./" class="link">Студия</a></li>
+		<header class="container header-container">
+			<a href="./index.html" class="logo">
+				Web&nbsp;
+				<span class="logo-header">Studio</span>
+			</a>
+			<button type="button" class="menu-button" aria-expanded="true" aria-controls="header-nav" data-menu-button>
+				<svg width="24" height="16" aria-label="Кнопка мобильного меню">
+					<use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+					<use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+				</svg>
+			</button>
+			<nav class="header-nav" id="header-nav" data-menu>
+				<ul class="list site-nav">
+					<li class="item"><a href="./" class="link">Студия</a></li>
+					<li class="item">
+						<a href="./portfolio.html" class="link current">
+							Портфолио
+						</a>
+					</li>
+					<li class="item"><a href="" class="link">Контакты</a></li>
+				</ul>
+				<address>
+					<ul class="address-nav list">
 						<li class="item">
-							<a href="./portfolio.html" class="link current">
-								Портфолио
+							<a href="mailto:info@devstudio.com" class="adress-header">
+								<svg class="icon address-mail-icon">
+									<use href="./images/sprite.svg#icon-mail"></use>
+								</svg>
+								info@devstudio.com
 							</a>
 						</li>
-						<li class="item"><a href="" class="link">Контакты</a></li>
+						<li class="item">
+							<a href="tel:+380961111111" class="adress-header">
+								<svg class="icon address-phone-icon">
+									<use href="./images/sprite.svg#icon-phone"></use>
+								</svg>
+								+38 096 111 11 11
+							</a>
+						</li>
 					</ul>
-				</nav>
-				<ul class="address-nav list">
-					<li class="item">
-						<a href="mailto:info@devstudio.com" class="adress-header">
-							<svg class="icon address-mail-icon">
-								<use href="./images/sprite.svg#icon-mail"></use>
-							</svg>
-							info@devstudio.com
-						</a>
-					</li>
-					<li class="item">
-						<a href="tel:+380961111111" class="adress-header">
-							<svg class="icon address-phone-icon">
-								<use href="./images/sprite.svg#icon-phone"></use>
-							</svg>
-							+38 096 111 11 11
-						</a>
-					</li>
-				</ul>
-			</div>
+				</address>
+			</nav>
 		</header>
 		<!-- Тело -->
 		<main>
