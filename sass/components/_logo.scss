@@ -1,9 +1,14 @@
 /* Logo */
 
 .logo {
+	display: inline-flex;
 	color: $accent-color;
 	font-family: $logoFont;
-	@include font(bold, 26px, 1.2);
+	@include font(bold, 24px, 1.17);
+
+	@media screen and (min-width: $desctop) {
+		@include font(bold, 26px, 1.2);
+	}
 
 	&-header {
 		color: $logo-color;
