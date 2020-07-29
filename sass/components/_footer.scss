@@ -3,36 +3,29 @@
 .footer {
 	background-color: $footer-bg-color;
 	color: $white-color;
-}
-
-.footer-container {
-	margin-left: auto;
-	margin-right: auto;
 	text-align: center;
 
-	@media screen and (min-width: $tablet) {
+	@media screen and(min-width:$tablet) {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		width: 600px;
+		align-items: baseline;
+	}
+	@media screen and(min-width:$desctop) {
+		text-align: start;
 	}
 
-	@media screen and(min-width: $desctop) {
-		width: $desctop;
-		flex-wrap: wrap;
-		align-items: baseline;
-		text-align: left;
+	& b {
+		display: block;
+		@include font(bold, 14px, 1.14);
+		text-transform: uppercase;
 	}
 }
 
 .address-container {
-	@media screen and(max-width: $desctop - 1px) {
-		margin-bottom: 60px;
+	@media screen and(min-width:$tablet) and(max-width:$desctop - 1px) {
+		flex-basis: 50%;
 	}
-}
-
-.logo-cont {
-	margin-bottom: 20px;
 }
 
 .list.address {
@@ -47,6 +40,10 @@
 	}
 }
 
+.logo-cont {
+	margin-bottom: 20px;
+}
+
 .footer-contact {
 	color: $footer-adress-color;
 	font-style: normal;
@@ -54,34 +51,57 @@
 }
 
 .connect {
-	@include font(bold, 14px, 1.14);
-	text-transform: uppercase;
-	@media screen and(max-width: $desctop - 1px) {
+	@media screen and(min-width:$tablet) and(max-width:$desctop - 1px) {
+		flex-basis: 50%;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	@media screen and(max-width: $tablet - 1px) {
+		margin-top: 60px;
 		margin-bottom: 60px;
 	}
 }
 
 .subscribe {
-	@include font(bold, 14px, 1.14);
-	text-transform: uppercase;
+	@media screen and(min-width:$tablet) and(max-width:$desctop - 1px) {
+		flex-basis: 100%;
+		margin-top: 60px;
+		margin-bottom: 0;
+	}
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	& b {
+		@include font(bold, 14px, 1.14);
+		text-transform: uppercase;
+	}
 }
 
 .subscribe-form {
-	@include centerFlex($align-items: baseline);
-	flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	@media screen and(min-width:$desctop) {
+		align-items: baseline;
+		flex-direction: row;
+	}
 }
 
 .footer-subscribe {
-	width: 450px;
+	width: 100%;
 	margin-top: 20px;
 	height: 50px;
+	padding-left: 16px;
+	@media screen and (max-width: $desctop - 1px) and (min-width: $tablet) {
+		width: 450px;
+	}
 	@media screen and(max-width: $desctop - 1px) {
 		margin-bottom: 20px;
 	}
-	margin-right: 12px;
-	padding-left: 16px;
 
 	@media screen and (min-width: $desctop) {
+		margin-right: 12px;
 		width: 360px;
 	}
 
@@ -96,7 +116,27 @@
 	color: $footer-adress-color;
 }
 
-.subscribe .button {
-	margin-right: auto;
-	margin-left: auto;
-}
+// .footer-container {
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	text-align: center;
+
+// 	@media screen and (min-width: $tablet) {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		justify-content: space-between;
+// 		width: 600px;
+// 	}
+
+// 	@media screen and(min-width: $desctop) {
+// 		width: $desctop;
+// 		flex-wrap: wrap;
+// 		align-items: baseline;
+// 		text-align: left;
+// 	}
+// }
+
+// .subscribe .button {
+// 	margin-right: auto;
+// 	margin-left: auto;
+// }
