@@ -7,6 +7,12 @@
 	min-height: 60px;
 	border-bottom: 1px solid #ececec;
 	@media screen and(min-width:$tablet) {
+		width: $tablet;
+		min-height: 80px;
+	}
+}
+.logo {
+	@media screen and(min-width:$tablet) {
 		margin-right: 81px;
 	}
 }
@@ -62,6 +68,9 @@
 	}
 	@media screen and(min-width:$tablet) {
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-grow: 1;
 	}
 }
 
@@ -75,17 +84,20 @@
 }
 
 .site-nav-link {
-	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 8px;
 
 	@include font(500, 18px, 1.16);
 	letter-spacing: 0.02em;
 	color: $title-text-color;
 
+	@media screen and(min-width:$tablet) {
+		@include font(500, 14px, 1.14);
+	}
+
 	&.current {
 		position: relative;
-		padding-bottom: 8px;
 		color: $accent-color;
 		&:after {
 			content: "";
@@ -99,25 +111,39 @@
 		}
 	}
 
-	// display: block;
-	// padding-top: 32px;
-	// padding-bottom: 32px;
+	@media screen and(min-width:$tablet) {
+		padding-bottom: 31px;
+		padding-top: 32px;
+	}
 
-	// &:hover,
-	// &:focus {
-	// 	color: $accent-color;
-	// 	cursor: pointer;
-	// 	@extend %Transition;
-	// }
+	&:hover,
+	&:focus {
+		color: $accent-color;
+		cursor: pointer;
+		@extend %Transition;
+	}
+}
+
+.site-nav {
+	@media screen and(min-width:$tablet) {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .site-nav-item {
-	margin-bottom: 40px;
-	&:last-child {
-		margin-bottom: 60px;
+	@media screen and(max-width:$tablet - 1px) {
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 60px;
+		}
 	}
+	margin-bottom: 0;
+
 	@media screen and(min-width:$tablet) {
-		// display: flex;
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
 	}
 }
 
@@ -136,8 +162,6 @@
 	color: $primary-text-color;
 	@include font(500, 14px, 1.14);
 	letter-spacing: 0.02em;
-	padding-top: 32px;
-	padding-bottom: 32px;
 
 	&:hover,
 	&:focus {
@@ -161,48 +185,3 @@
 	fill: currentColor;
 	vertical-align: middle;
 }
-
-// .current {
-// 	color: $accent-color;
-
-// 	&:after {
-// 		content: "";
-// 		position: absolute;
-// 		bottom: 0;
-// 		left: 0;
-// 		height: 4px;
-// 		width: 100%;
-// 		border-radius: 2px;
-// 		background-color: $accent-color;
-// 	}
-// }
-
-// .address-nav {
-// @include centerFlex;
-// margin-left: auto;
-
-// & .item + .item {
-// 	margin-left: 30px;
-// }
-// }
-
-// .site-nav {
-// 	@include centerFlex;
-
-// 	& .item {
-// 		position: relative;
-// 	}
-
-// 	& .item + .item {
-// 		margin-left: 50px;
-// 	}
-// }
-
-// .top-nav {
-// 	margin-left: 85px;
-// }
-
-// .header-nav {
-// 	@include centerFlex;
-// 	border-bottom: 1px solid #ececec;
-// }
