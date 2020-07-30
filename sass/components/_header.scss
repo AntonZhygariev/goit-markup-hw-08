@@ -4,9 +4,18 @@
 	justify-content: space-between;
 
 	align-items: center;
+	min-height: 60px;
+	border-bottom: 1px solid #ececec;
+	@media screen and(min-width:$tablet) {
+		margin-right: 81px;
+	}
 }
 
 .menu-button {
+	@media screen and(min-width:$tablet) {
+		display: none;
+	}
+
 	display: flex;
 	margin: 0;
 	padding: 0;
@@ -51,6 +60,9 @@
 		transform: translateY(0%);
 		opacity: 1;
 	}
+	@media screen and(min-width:$tablet) {
+		display: flex;
+	}
 }
 
 .icon-cross {
@@ -62,50 +74,77 @@
 	height: 40px;
 }
 
-// .link {
-// 	color: $title-text-color;
-// 	@include font(500, 14px, 1.14);
-// 	letter-spacing: 0.02em;
-// 	display: block;
-// 	padding-top: 32px;
-// 	padding-bottom: 32px;
+.site-nav-link {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
 
-// 	&:hover,
-// 	&:focus {
-// 		color: $accent-color;
-// 		cursor: pointer;
-// 		@extend %Transition;
-// 	}
-// }
+	@include font(500, 18px, 1.16);
+	letter-spacing: 0.02em;
+	color: $title-text-color;
 
-// .current {
-// 	color: $accent-color;
+	&.current {
+		position: relative;
+		padding-bottom: 8px;
+		color: $accent-color;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 4px;
+			width: 100%;
+			border-radius: 2px;
+			background-color: $accent-color;
+		}
+	}
 
-// 	&:after {
-// 		content: "";
-// 		position: absolute;
-// 		bottom: 0;
-// 		left: 0;
-// 		height: 4px;
-// 		width: 100%;
-// 		border-radius: 2px;
-// 		background-color: $accent-color;
-// 	}
-// }
+	// display: block;
+	// padding-top: 32px;
+	// padding-bottom: 32px;
 
-// .adress-header {
-// 	color: $primary-text-color;
-// 	@include font(500, 14px, 1.14);
-// 	letter-spacing: 0.02em;
-// 	padding-top: 32px;
-// 	padding-bottom: 32px;
+	// &:hover,
+	// &:focus {
+	// 	color: $accent-color;
+	// 	cursor: pointer;
+	// 	@extend %Transition;
+	// }
+}
 
-// 	&:hover,
-// 	&:focus {
-// 		color: $accent-color;
-// 		@extend %Transition;
-// 	}
-// }
+.site-nav-item {
+	margin-bottom: 40px;
+	&:last-child {
+		margin-bottom: 60px;
+	}
+	@media screen and(min-width:$tablet) {
+		// display: flex;
+	}
+}
+
+.address-nav-item {
+	margin-bottom: 16px;
+	@media screen and(min-width:$tablet) {
+		margin-bottom: 10px;
+	}
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}
+
+.adress-header {
+	font-style: normal;
+	color: $primary-text-color;
+	@include font(500, 14px, 1.14);
+	letter-spacing: 0.02em;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+		@extend %Transition;
+	}
+}
 
 .address-mail-icon {
 	width: 16px;
@@ -123,6 +162,30 @@
 	vertical-align: middle;
 }
 
+// .current {
+// 	color: $accent-color;
+
+// 	&:after {
+// 		content: "";
+// 		position: absolute;
+// 		bottom: 0;
+// 		left: 0;
+// 		height: 4px;
+// 		width: 100%;
+// 		border-radius: 2px;
+// 		background-color: $accent-color;
+// 	}
+// }
+
+// .address-nav {
+// @include centerFlex;
+// margin-left: auto;
+
+// & .item + .item {
+// 	margin-left: 30px;
+// }
+// }
+
 // .site-nav {
 // 	@include centerFlex;
 
@@ -137,15 +200,6 @@
 
 // .top-nav {
 // 	margin-left: 85px;
-// }
-
-// .address-nav {
-// 	@include centerFlex;
-// 	margin-left: auto;
-
-// 	& .item + .item {
-// 		margin-left: 30px;
-// 	}
 // }
 
 // .header-nav {
