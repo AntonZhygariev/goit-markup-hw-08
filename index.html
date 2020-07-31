@@ -230,7 +230,22 @@
 					<h2 class="section-title">Наша команда</h2>
 					<ul class="list team">
 						<li class="team-item">
-							<img src="./images/johnsmith.jpg" alt="Николай Кучеренко" width="270" />
+							<picture>
+								<source
+									srcset="./images/nikalay_450.jpg 1x, ./images/nikalay_450@2.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<source
+									srcset="./images/nikalay_354.jpg 1x, ./images/nikalay_354@2.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/nikalay_270.jpg 1x, ./images/nikalay_270@2.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+
+								<img src="./images/nikalay_270.jpg" alt="Николай Кучеренко" />
+							</picture>
 							<h3 class="team-name">Николай Кучеренко</h3>
 							<p class="position">Product Designer</p>
 							<ul class="list social">
@@ -258,7 +273,13 @@
 						</li>
 
 						<li class="team-item">
-							<img src="./images/martastewart.jpg" alt="Ольга Иванова" width="270" />
+							<picture>
+								<source srcset="./images/olga_450.jpg 1x, ./images/olga_450@2.jpg 2x" media="(max-width: 767px)" />
+								<source srcset="./images/olga_354.jpg 1x, ./images/olga_354@2.jpg 2x" media="(min-width: 768px)" />
+								<source srcset="./images/olga_270.jpg 1x, ./images/olga_270@2.jpg 2x" media="(min-width: 1200px)" />
+
+								<img src="./images/olga_450.jpg" alt="Ольга Иванова" />
+							</picture>
 							<h3 class="team-name">Ольга Иванова</h3>
 							<p class="position">Frontend Developer</p>
 							<ul class="list social">
