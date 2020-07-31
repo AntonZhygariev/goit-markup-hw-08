@@ -20,6 +20,8 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Body */
@@ -151,42 +153,6 @@ body {
   }
 }
 
-.menu-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-}
-
-.menu-button:hover, .menu-button:focus {
-  fill: #2196f3;
-  outline: transparent;
-}
-
-.menu-button.is-open {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  opacity: 1;
-}
-
-.menu-button.is-open .icon-cross {
-  display: block;
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
-}
-
 @media screen and (max-width: 767px) {
   .header-nav {
     position: absolute;
@@ -229,13 +195,34 @@ body {
   }
 }
 
-.icon-cross {
-  display: none;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
-.icon-menu {
-  width: 40px;
-  height: 40px;
+.site-nav-item {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav-item {
+    margin-bottom: 40px;
+  }
+  .site-nav-item:last-child {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav-link {
@@ -283,36 +270,6 @@ body {
 .site-nav-link:hover, .site-nav-link:focus {
   color: #2196f3;
   cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.site-nav-item {
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .site-nav-item {
-    margin-bottom: 40px;
-  }
-  .site-nav-item:last-child {
-    margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .site-nav-item:not(:last-child) {
-    margin-right: 50px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -382,6 +339,51 @@ body {
   margin-right: 10px;
   fill: currentColor;
   vertical-align: middle;
+}
+
+.menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button:hover, .menu-button:focus {
+  fill: #2196f3;
+  outline: transparent;
+}
+
+.menu-button.is-open {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.icon-cross {
+  display: none;
+}
+
+.icon-menu {
+  width: 40px;
+  height: 40px;
 }
 
 /* Hero */

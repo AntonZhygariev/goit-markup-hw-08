@@ -15,36 +15,6 @@
 	}
 }
 
-.menu-button {
-	@media screen and(min-width:$tablet) {
-		display: none;
-	}
-
-	display: flex;
-	margin: 0;
-	padding: 0;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-	&:hover,
-	&:focus {
-		fill: $accent-color;
-		outline: transparent;
-	}
-
-	&.is-open {
-		transform: translateY(0%);
-		opacity: 1;
-
-		& .icon-cross {
-			display: block;
-		}
-		& .icon-menu {
-			display: none;
-		}
-	}
-}
-
 .header-nav {
 	@media screen and(max-width:$tablet - 1px) {
 		position: absolute;
@@ -72,13 +42,27 @@
 	}
 }
 
-.icon-cross {
-	display: none;
+.site-nav {
+	@media screen and(min-width:$tablet) {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
-.icon-menu {
-	width: 40px;
-	height: 40px;
+.site-nav-item {
+	@media screen and(max-width:$tablet - 1px) {
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 60px;
+		}
+	}
+	margin-bottom: 0;
+
+	@media screen and(min-width:$tablet) {
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
+	}
 }
 
 .site-nav-link {
@@ -119,29 +103,6 @@
 		color: $accent-color;
 		cursor: pointer;
 		@extend %Transition;
-	}
-}
-
-.site-nav {
-	@media screen and(min-width:$tablet) {
-		display: flex;
-		justify-content: space-between;
-	}
-}
-
-.site-nav-item {
-	@media screen and(max-width:$tablet - 1px) {
-		margin-bottom: 40px;
-		&:last-child {
-			margin-bottom: 60px;
-		}
-	}
-	margin-bottom: 0;
-
-	@media screen and(min-width:$tablet) {
-		&:not(:last-child) {
-			margin-right: 50px;
-		}
 	}
 }
 
@@ -200,4 +161,43 @@
 	margin-right: 10px;
 	fill: currentColor;
 	vertical-align: middle;
+}
+
+.menu-button {
+	@media screen and(min-width:$tablet) {
+		display: none;
+	}
+
+	display: flex;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		fill: $accent-color;
+		outline: transparent;
+	}
+
+	&.is-open {
+		transform: translateY(0%);
+		opacity: 1;
+
+		& .icon-cross {
+			display: block;
+		}
+		& .icon-menu {
+			display: none;
+		}
+	}
+}
+
+.icon-cross {
+	display: none;
+}
+
+.icon-menu {
+	width: 40px;
+	height: 40px;
 }
