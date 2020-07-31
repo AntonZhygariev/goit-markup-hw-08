@@ -103,7 +103,22 @@
 						<li class="project-container">
 							<a href="" class="item">
 								<div class="portfolio-overlay">
-									<img class="img-block" src="./images/techokryak.jpg" alt="team" width="370" />
+									<picture>
+										<source
+											srcset="./images/nikalay_450.jpg 1x, ./images/nikalay_450@2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<source
+											srcset="./images/nikalay_354.jpg 1x, ./images/nikalay_354@2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/nikalay_270.jpg 1x, ./images/nikalay_270@2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+
+										<img src="./images/nikalay_270.jpg" alt="Николай Кучеренко" />
+									</picture>
 									<p class="full-text-item">
 										Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
 										для цифрового шпионажа и атак на защищённые сервера конкурентов.
