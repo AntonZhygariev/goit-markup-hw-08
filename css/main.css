@@ -690,8 +690,11 @@ body {
 }
 
 /* Footer */
-.footer {
+footer {
   background-color: #2f303a;
+}
+
+.footer {
   color: #ffffff;
   text-align: center;
 }
