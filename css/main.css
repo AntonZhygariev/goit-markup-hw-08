@@ -113,6 +113,7 @@ body {
 
 .logo-header {
   color: #000000;
+  margin-left: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -122,6 +123,7 @@ body {
 }
 
 .logo-footer {
+  margin-left: 8px;
   color: #ffffff;
 }
 

@@ -12,12 +12,14 @@
 
 	&-header {
 		color: $logo-color;
+		margin-left: 8px;
 		@media screen and (min-width: $tablet) {
 			margin-right: 81px;
 		}
 	}
 
 	&-footer {
+		margin-left: 8px;
 		color: $white-color;
 	}
 }
