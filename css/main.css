@@ -428,6 +428,12 @@ body {
   width: 360px;
 }
 
+@media screen and (max-width: 479px) {
+  .hero {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero {
     width: 700px;

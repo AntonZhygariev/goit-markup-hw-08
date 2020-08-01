@@ -14,6 +14,9 @@
 }
 
 .hero {
+	@media screen and(max-width:$mobile - 1px) {
+		width: 100%;
+	}
 	@include centerFlex;
 	flex-wrap: wrap;
 	padding-top: 118px;
