@@ -71,9 +71,7 @@ footer {
 		margin-top: 60px;
 		margin-bottom: 0;
 	}
-	// display: flex;
-	// align-items: center;
-	// justify-content: center;
+
 	& b {
 		@include font(bold, 14px, 1.14);
 		text-transform: uppercase;
@@ -117,28 +115,3 @@ footer {
 
 	color: $footer-adress-color;
 }
-
-// .footer-container {
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	text-align: center;
-
-// 	@media screen and (min-width: $tablet) {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		justify-content: space-between;
-// 		width: 600px;
-// 	}
-
-// 	@media screen and(min-width: $desctop) {
-// 		width: $desctop;
-// 		flex-wrap: wrap;
-// 		align-items: baseline;
-// 		text-align: left;
-// 	}
-// }
-
-// .subscribe .button {
-// 	margin-right: auto;
-// 	margin-left: auto;
-// }
